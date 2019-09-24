@@ -42,6 +42,15 @@ public class CacheConfiguration {
             createCache(cm, com.awabcodes.courseware.domain.User.class.getName());
             createCache(cm, com.awabcodes.courseware.domain.Authority.class.getName());
             createCache(cm, com.awabcodes.courseware.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.awabcodes.courseware.domain.Course.class.getName());
+            createCache(cm, com.awabcodes.courseware.domain.Course.class.getName() + ".tags");
+            createCache(cm, com.awabcodes.courseware.domain.Category.class.getName());
+            createCache(cm, com.awabcodes.courseware.domain.Category.class.getName() + ".courses");
+            createCache(cm, com.awabcodes.courseware.domain.Category.class.getName() + ".favorites");
+            createCache(cm, com.awabcodes.courseware.domain.Tag.class.getName());
+            createCache(cm, com.awabcodes.courseware.domain.Tag.class.getName() + ".courses");
+            createCache(cm, com.awabcodes.courseware.domain.Favorite.class.getName());
+            createCache(cm, com.awabcodes.courseware.domain.Favorite.class.getName() + ".categories");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="favorite">
+            <h2><span jhiTranslate="coursewareApp.favorite.detail.title">Favorite</span> {{favorite.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="coursewareApp.favorite.user">User</span></dt>
+                <dd>
+                    {{favorite.user?.login}}
+                </dd>
+                <dt><span jhiTranslate="coursewareApp.favorite.categories">Categories</span></dt>
+                <dd>
+                    <span *ngFor="let categories of favorite.categories; let last = last">
+                        <a [routerLink]="['/category', categories?.id, 'view' ]">{{categories.name}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/favorite', favorite.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
