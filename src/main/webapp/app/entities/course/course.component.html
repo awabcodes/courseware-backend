@@ -20,17 +20,11 @@
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="picture"><span jhiTranslate="coursewareApp.course.picture">Picture</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="title"><span jhiTranslate="coursewareApp.course.title">Title</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="subtitle"><span jhiTranslate="coursewareApp.course.subtitle">Subtitle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="startDate"><span jhiTranslate="coursewareApp.course.startDate">Start Date</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="endDate"><span jhiTranslate="coursewareApp.course.endDate">End Date</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="price"><span jhiTranslate="coursewareApp.course.price">Price</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="level"><span jhiTranslate="coursewareApp.course.level">Level</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="tutor"><span jhiTranslate="coursewareApp.course.tutor">Tutor</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="contactInfo"><span jhiTranslate="coursewareApp.course.contactInfo">Contact Info</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="requirements"><span jhiTranslate="coursewareApp.course.requirements">Requirements</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="description"><span jhiTranslate="coursewareApp.course.description">Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="location"><span jhiTranslate="coursewareApp.course.location">Location</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="hours"><span jhiTranslate="coursewareApp.course.hours">Hours</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="category.name"><span jhiTranslate="coursewareApp.course.category">Category</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
@@ -45,17 +39,11 @@
                     <span *ngIf="course.picture">{{course.pictureContentType}}, {{byteSize(course.picture)}}</span>
                 </td>
                 <td>{{course.title}}</td>
-                <td>{{course.subtitle}}</td>
                 <td>{{course.startDate | date:'mediumDate'}}</td>
                 <td>{{course.endDate | date:'mediumDate'}}</td>
                 <td>{{course.price}}</td>
                 <td jhiTranslate="{{'coursewareApp.CourseLevel.' + course.level}}">{{course.level}}</td>
                 <td>{{course.tutor}}</td>
-                <td>{{course.contactInfo}}</td>
-                <td>{{course.requirements}}</td>
-                <td>{{course.description}}</td>
-                <td>{{course.location}}</td>
-                <td>{{course.hours}}</td>
                 <td>
                     <div *ngIf="course.category">
                         <a [routerLink]="['/category', course.category?.id, 'view' ]" >{{course.category?.name}}</a>
