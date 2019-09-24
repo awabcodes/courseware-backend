@@ -16,6 +16,10 @@ Navbar
   width: 1.75em;
 }
 
+.navbar-title {
+  color: $navbar-dark-color;
+}
+
 .navbar {
   padding: 0.2rem 1rem;
   .dropdown-item.active,
@@ -32,6 +36,7 @@ Navbar
 
   a.nav-link {
     font-weight: 400;
+    color: $navbar-dark-color;
   }
 
   .navbar-toggler {
