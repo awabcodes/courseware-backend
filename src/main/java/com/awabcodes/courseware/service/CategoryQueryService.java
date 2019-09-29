@@ -92,10 +92,6 @@ public class CategoryQueryService extends QueryService<Category> {
                 specification = specification.and(buildSpecification(criteria.getCoursesId(),
                     root -> root.join(Category_.courses, JoinType.LEFT).get(Course_.id)));
             }
-            if (criteria.getFavoritesId() != null) {
-                specification = specification.and(buildSpecification(criteria.getFavoritesId(),
-                    root -> root.join(Category_.favorites, JoinType.LEFT).get(Favorite_.id)));
-            }
         }
         return specification;
     }

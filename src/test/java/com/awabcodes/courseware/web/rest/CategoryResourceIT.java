@@ -3,7 +3,6 @@ package com.awabcodes.courseware.web.rest;
 import com.awabcodes.courseware.CoursewareApp;
 import com.awabcodes.courseware.domain.Category;
 import com.awabcodes.courseware.domain.Course;
-import com.awabcodes.courseware.domain.Favorite;
 import com.awabcodes.courseware.repository.CategoryRepository;
 import com.awabcodes.courseware.service.CategoryService;
 import com.awabcodes.courseware.web.rest.errors.ExceptionTranslator;
@@ -231,26 +230,6 @@ public class CategoryResourceIT {
 
         // Get all the categoryList where courses equals to coursesId + 1
         defaultCategoryShouldNotBeFound("coursesId.equals=" + (coursesId + 1));
-    }
-
-
-    @Test
-    @Transactional
-    public void getAllCategoriesByFavoritesIsEqualToSomething() throws Exception {
-        // Initialize the database
-        categoryRepository.saveAndFlush(category);
-        Favorite favorites = FavoriteResourceIT.createEntity(em);
-        em.persist(favorites);
-        em.flush();
-        category.addFavorites(favorites);
-        categoryRepository.saveAndFlush(category);
-        Long favoritesId = favorites.getId();
-
-        // Get all the categoryList where favorites equals to favoritesId
-        defaultCategoryShouldBeFound("favoritesId.equals=" + favoritesId);
-
-        // Get all the categoryList where favorites equals to favoritesId + 1
-        defaultCategoryShouldNotBeFound("favoritesId.equals=" + (favoritesId + 1));
     }
 
     /**

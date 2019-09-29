@@ -30,8 +30,6 @@ public class CategoryCriteria implements Serializable, Criteria {
 
     private LongFilter coursesId;
 
-    private LongFilter favoritesId;
-
     public CategoryCriteria(){
     }
 
@@ -39,7 +37,6 @@ public class CategoryCriteria implements Serializable, Criteria {
         this.id = other.id == null ? null : other.id.copy();
         this.name = other.name == null ? null : other.name.copy();
         this.coursesId = other.coursesId == null ? null : other.coursesId.copy();
-        this.favoritesId = other.favoritesId == null ? null : other.favoritesId.copy();
     }
 
     @Override
@@ -71,14 +68,6 @@ public class CategoryCriteria implements Serializable, Criteria {
         this.coursesId = coursesId;
     }
 
-    public LongFilter getFavoritesId() {
-        return favoritesId;
-    }
-
-    public void setFavoritesId(LongFilter favoritesId) {
-        this.favoritesId = favoritesId;
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -92,8 +81,7 @@ public class CategoryCriteria implements Serializable, Criteria {
         return
             Objects.equals(id, that.id) &&
             Objects.equals(name, that.name) &&
-            Objects.equals(coursesId, that.coursesId) &&
-            Objects.equals(favoritesId, that.favoritesId);
+            Objects.equals(coursesId, that.coursesId);
     }
 
     @Override
@@ -101,8 +89,7 @@ public class CategoryCriteria implements Serializable, Criteria {
         return Objects.hash(
         id,
         name,
-        coursesId,
-        favoritesId
+        coursesId
         );
     }
 
@@ -112,7 +99,6 @@ public class CategoryCriteria implements Serializable, Criteria {
                 (id != null ? "id=" + id + ", " : "") +
                 (name != null ? "name=" + name + ", " : "") +
                 (coursesId != null ? "coursesId=" + coursesId + ", " : "") +
-                (favoritesId != null ? "favoritesId=" + favoritesId + ", " : "") +
             "}";
     }
 

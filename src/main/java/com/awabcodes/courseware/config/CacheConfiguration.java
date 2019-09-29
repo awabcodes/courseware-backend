@@ -49,8 +49,6 @@ public class CacheConfiguration {
             createCache(cm, com.awabcodes.courseware.domain.Category.class.getName() + ".favorites");
             createCache(cm, com.awabcodes.courseware.domain.Tag.class.getName());
             createCache(cm, com.awabcodes.courseware.domain.Tag.class.getName() + ".courses");
-            createCache(cm, com.awabcodes.courseware.domain.Favorite.class.getName());
-            createCache(cm, com.awabcodes.courseware.domain.Favorite.class.getName() + ".categories");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -12,14 +12,6 @@
             "otherEntityName": "course",
             "otherEntityRelationshipName": "category",
             "relationshipName": "courses"
-        },
-        {
-            "relationshipType": "many-to-many",
-            "otherEntityName": "favorite",
-            "otherEntityRelationshipName": "categories",
-            "relationshipName": "favorites",
-            "otherEntityField": "id",
-            "ownerSide": false
         }
     ],
     "changelogDate": "20190924091657",

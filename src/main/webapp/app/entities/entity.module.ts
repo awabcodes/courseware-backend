@@ -15,10 +15,6 @@ import { RouterModule } from '@angular/router';
       {
         path: 'tag',
         loadChildren: () => import('./tag/tag.module').then(m => m.CoursewareTagModule)
-      },
-      {
-        path: 'favorite',
-        loadChildren: () => import('./favorite/favorite.module').then(m => m.CoursewareFavoriteModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])

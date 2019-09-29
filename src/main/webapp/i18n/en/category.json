@@ -17,8 +17,7 @@
         "title": "Category"
       },
       "name": "Name",
-      "courses": "Courses",
-      "favorites": "Favorites"
+      "courses": "Courses"
     }
   }
 }

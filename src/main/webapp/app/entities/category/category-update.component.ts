@@ -5,12 +5,8 @@ import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
-import { JhiAlertService } from 'ng-jhipster';
 import { ICategory, Category } from 'app/shared/model/category.model';
 import { CategoryService } from './category.service';
-import { IFavorite } from 'app/shared/model/favorite.model';
-import { FavoriteService } from 'app/entities/favorite/favorite.service';
 
 @Component({
   selector: 'jhi-category-update',
@@ -19,33 +15,18 @@ import { FavoriteService } from 'app/entities/favorite/favorite.service';
 export class CategoryUpdateComponent implements OnInit {
   isSaving: boolean;
 
-  favorites: IFavorite[];
-
   editForm = this.fb.group({
     id: [],
     name: []
   });
 
-  constructor(
-    protected jhiAlertService: JhiAlertService,
-    protected categoryService: CategoryService,
-    protected favoriteService: FavoriteService,
-    protected activatedRoute: ActivatedRoute,
-    private fb: FormBuilder
-  ) {}
+  constructor(protected categoryService: CategoryService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
 
   ngOnInit() {
     this.isSaving = false;
     this.activatedRoute.data.subscribe(({ category }) => {
       this.updateForm(category);
     });
-    this.favoriteService
-      .query()
-      .pipe(
-        filter((mayBeOk: HttpResponse<IFavorite[]>) => mayBeOk.ok),
-        map((response: HttpResponse<IFavorite[]>) => response.body)
-      )
-      .subscribe((res: IFavorite[]) => (this.favorites = res), (res: HttpErrorResponse) => this.onError(res.message));
   }
 
   updateForm(category: ICategory) {
@@ -88,23 +69,5 @@ export class CategoryUpdateComponent implements OnInit {
 
   protected onSaveError() {
     this.isSaving = false;
-  }
-  protected onError(errorMessage: string) {
-    this.jhiAlertService.error(errorMessage, null, null);
-  }
-
-  trackFavoriteById(index: number, item: IFavorite) {
-    return item.id;
-  }
-
-  getSelected(selectedVals: any[], option: any) {
-    if (selectedVals) {
-      for (let i = 0; i < selectedVals.length; i++) {
-        if (option.id === selectedVals[i].id) {
-          return selectedVals[i];
-        }
-      }
-    }
-    return option;
   }
 }

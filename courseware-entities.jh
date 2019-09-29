@@ -26,18 +26,12 @@ entity Tag {
     name String
 }
 
-entity Favorite {
-
-}
-
 relationship ManyToOne {
     Course{category(name) required} to Category{courses(title)}
-    Favorite{user(login) required} to User
 }
 
 relationship ManyToMany {
     Course{tags(name)} to Tag{courses(title)}
-    Favorite{categories(name)} to Category{favorites}
 }
 
 filter *
