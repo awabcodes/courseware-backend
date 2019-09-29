@@ -2,35 +2,35 @@
   "coursewareApp": {
     "course": {
       "home": {
-        "title": "Courses",
-        "createLabel": "Create a new Course",
-        "createOrEditLabel": "Create or edit a Course",
-        "notFound": "No Courses found"
+        "title": "دورات",
+        "createLabel": "إنشاء دورة جديدة",
+        "createOrEditLabel": "إنشاء أو تحرير دورة تدريبية",
+        "notFound": "لم يتم العثور على الدورات"
       },
-      "created": "A new Course is created with identifier {{ param }}",
-      "updated": "A Course is updated with identifier {{ param }}",
-      "deleted": "A Course is deleted with identifier {{ param }}",
+      "created": "تم إنشاء دورة جديدة مع معرف {{ param }}",
+      "updated": "تم تحديث الدورة مع المعرف {{ param }}",
+      "deleted": "تم حذف الدورة مع المعرف {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Course {{ id }}?"
+        "question": "هل أنت متأكد أنك تريد حذف الدورة التدريبية؟ {{ id }}"
       },
       "detail": {
-        "title": "Course"
+        "title": "دورة"
       },
-      "picture": "Picture",
-      "title": "Title",
-      "subtitle": "Subtitle",
-      "startDate": "Start Date",
-      "endDate": "End Date",
-      "price": "Price",
-      "level": "Level",
-      "tutor": "Tutor",
-      "contactInfo": "Contact Info",
-      "requirements": "Requirements",
-      "description": "Description",
-      "location": "Location",
-      "hours": "Hours",
-      "category": "Category",
-      "tags": "Tags"
+      "picture": "صورة",
+      "title": "عنوان",
+      "subtitle": "عنوان جانبي",
+      "startDate": "تاريخ البدايه",
+      "endDate": "تاريخ النهايه",
+      "price": "سعر",
+      "level": "مستوى",
+      "tutor": "مدرس",
+      "contactInfo": "معلومات الاتصال",
+      "requirements": "متطلبات",
+      "description": "تفاصيل",
+      "location": "مكان",
+      "hours": "ساعات",
+      "category": "تصنيف",
+      "tags": "تاقز"
     }
   }
 }

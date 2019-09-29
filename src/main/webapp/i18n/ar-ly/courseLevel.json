@@ -2,9 +2,9 @@
   "coursewareApp": {
     "CourseLevel": {
       "null": "",
-      "BEGINNER": "BEGINNER",
-      "INTERMEDIATE": "INTERMEDIATE",
-      "ADVANCED": "ADVANCED"
+      "BEGINNER": "مبتدئ",
+      "INTERMEDIATE": "متوسط",
+      "ADVANCED": "متقدم"
     }
   }
 }

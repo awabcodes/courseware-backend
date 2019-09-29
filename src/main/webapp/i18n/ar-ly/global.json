@@ -7,10 +7,10 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "الكيانات",
-        "course": "Course",
-        "category": "Category",
-        "tag": "Tag",
-        "favorite": "Favorite",
+        "course": "الدورات",
+        "category": "التصنيفات",
+        "tag": "تاقز",
+        "favorite": "المفضله",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -40,8 +40,8 @@
     "form": {
       "username.label": "اسم المستخدم",
       "username.placeholder": "إسم المستخدم الخاص بك",
-      "currentpassword.label": "Current password",
-      "currentpassword.placeholder": "Current password",
+      "currentpassword.label": "كلمة السر الحاليه",
+      "currentpassword.placeholder": "كلمة السر الحاليه",
       "newpassword.label": "كلمة السر الجديدة",
       "newpassword.placeholder": "كلمة السر الجديدة",
       "confirmpassword.label": "تأكيد كلمة السر الجديدة",

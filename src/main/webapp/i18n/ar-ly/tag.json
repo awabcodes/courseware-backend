@@ -2,22 +2,22 @@
   "coursewareApp": {
     "tag": {
       "home": {
-        "title": "Tags",
-        "createLabel": "Create a new Tag",
-        "createOrEditLabel": "Create or edit a Tag",
-        "notFound": "No Tags found"
+        "title": "تاقز",
+        "createLabel": "إنشاء علامة جديدة",
+        "createOrEditLabel": "إنشاء أو تعديل علامة",
+        "notFound": "لا توجد علامات"
       },
-      "created": "A new Tag is created with identifier {{ param }}",
-      "updated": "A Tag is updated with identifier {{ param }}",
-      "deleted": "A Tag is deleted with identifier {{ param }}",
+      "created": "تم إنشاء علامة جديدة مع المعرف {{ param }}",
+      "updated": "تم تحديث العلامة مع المعرف {{ param }}",
+      "deleted": "تم حذف العلامة مع المعرف {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Tag {{ id }}?"
+        "question": "هل أنت متأكد أنك تريد حذف العلامة؟ {{ id }}"
       },
       "detail": {
-        "title": "Tag"
+        "title": "علامة"
       },
-      "name": "Name",
-      "courses": "Courses"
+      "name": "اسم",
+      "courses": "دورات"
     }
   }
 }

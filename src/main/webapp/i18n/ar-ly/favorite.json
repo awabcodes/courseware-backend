@@ -2,22 +2,22 @@
   "coursewareApp": {
     "favorite": {
       "home": {
-        "title": "Favorites",
-        "createLabel": "Create a new Favorite",
-        "createOrEditLabel": "Create or edit a Favorite",
-        "notFound": "No Favorites found"
+        "title": "المفضلة",
+        "createLabel": "إنشاء مفضل جديد",
+        "createOrEditLabel": "إنشاء أو تعديل مفضل",
+        "notFound": "لم يتم العثور على المفضلة"
       },
-      "created": "A new Favorite is created with identifier {{ param }}",
-      "updated": "A Favorite is updated with identifier {{ param }}",
-      "deleted": "A Favorite is deleted with identifier {{ param }}",
+      "created": "تم إنشاء المفضلة جديدة مع معرف {{ param }}",
+      "updated": "تم تحديث المفضلة مع معرف {{ param }}",
+      "deleted": "تم حذف المفضلة مع المعرف {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Favorite {{ id }}?"
+        "question": "هل أنت متأكد أنك تريد حذف المفضلة؟ {{ id }}"
       },
       "detail": {
-        "title": "Favorite"
+        "title": "مفضل"
       },
-      "user": "User",
-      "categories": "Categories"
+      "user": "مستخدم",
+      "categories": "تصنيفات"
     }
   }
 }
